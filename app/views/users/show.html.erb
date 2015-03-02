@@ -1,6 +1,6 @@
 <div class="page-header">
   <%= link_to "New Rant", new_user_rant_path(@user), class: "btn btn-info pull-right" %>
-  <h2> <%= @user.full_name %>'s Rants </h2>
+  <h2> <%= link_to @user.full_name, edit_user_path(@user) %>'s Rants </h2>
 </div>
 
 <h2>Rants</h2>
@@ -8,7 +8,7 @@
   <th class = "col-md-3">
     Title
   </th>
-  <th class = "col-md-3">
+  <th class = "col-md-9">
     Body
   </th>
   <th>
@@ -19,7 +19,7 @@
     <td class = "col-md-3">
       <%= rant.title %><br>
     </td>
-    <td class = "col-md-3">
+    <td class = "col-md-9">
       <%= rant.body %><br>
     </td>
     <td>
@@ -28,3 +28,5 @@
   </tr>
     <% end %>
 </table>
+
+  <%= link_to "Delete User", user_path(@user), :method => :delete, class: "btn btn-danger pull-right" %>

@@ -1,9 +1,6 @@
-<div class="page-header">
-  <h2><%= title %> Rant</h2>
-</div>
-
-
 <div class="col-md-8">
+
+  <%= render "layouts/errors", object: @rant %>
 
   <%= form_for [@user, @rant] do |f| %>
 
@@ -19,7 +16,7 @@
 
 
     <div class="form-group">
-      <%= f.submit class:"btn btn-primary col-md-offset-2" %>
+      <%= f.submit class:"btn btn-info col-md-offset-2" %>
     </div>
 
   <% end %>

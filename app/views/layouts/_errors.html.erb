@@ -1,0 +1,18 @@
+<% if object.errors.present? %>
+  <div class="alert alert-danger col-md-offset-2">
+
+    <strong>
+      <%= pluralize(object.errors.count, "error") %>
+      prohibited this post from being saved:
+    </strong>
+
+      <ul>
+        <% object.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+
+  </div>
+<% end %>

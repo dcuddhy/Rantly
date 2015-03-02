@@ -1,1 +1,6 @@
+<div class="page-header">
+  <%= link_to "Delete", user_rant_path(@user, @rant), :method => :delete, class: "btn btn-danger pull-right" %>
+  <h2>Edit Rant</h2>
+</div>
+
 <%= render 'form', title: "Edit" %>
