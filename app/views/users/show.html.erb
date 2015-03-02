@@ -1,0 +1,30 @@
+<div class="page-header">
+  <%= link_to "New Rant", new_user_rant_path(@user), class: "btn btn-info pull-right" %>
+  <h2> <%= @user.full_name %>'s Rants </h2>
+</div>
+
+<h2>Rants</h2>
+<table class = "table table-striped">
+  <th class = "col-md-3">
+    Title
+  </th>
+  <th class = "col-md-3">
+    Body
+  </th>
+  <th>
+  </th>
+
+  <tr>
+    <% @user.rants.each do |rant| %>
+    <td class = "col-md-3">
+      <%= rant.title %><br>
+    </td>
+    <td class = "col-md-3">
+      <%= rant.body %><br>
+    </td>
+    <td>
+      <%= link_to "Edit", edit_user_rant_path(@user, rant) %>
+    </td>
+  </tr>
+    <% end %>
+</table>
