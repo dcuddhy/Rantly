@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'autoprefixer-rails'
 gem 'faker'
+gem 'bcrypt'
 
 gem 'active_model_serializers', '0.8.3'
 gem 'rack-cors'

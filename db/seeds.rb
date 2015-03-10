@@ -10,10 +10,11 @@ Rant.delete_all
   )
 end
 
-600.times do |i|
+5000.times do |i|
   Rant.create!(
-    title: Faker::Lorem.sentence(3, true, 4),
+    title: Faker::Lorem.sentence
+(3, true, 4),
     body: Faker::Lorem.paragraph,
-    user_id: Faker::Number.number(2)
+    user_id: Faker::Number.number(3)
   )
 end

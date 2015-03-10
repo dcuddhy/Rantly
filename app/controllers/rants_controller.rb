@@ -1,32 +1,23 @@
 class RantsController < ApplicationController
 
-  before_action do
-    @user = User.find(params[:user_id])
-    render json: @rants
-  end
-
   def index
     @rants = Rant.all
-    render json: @rants
   end
 
   def new
-    @rant = @user.rants.new
-    render json: @rant
+    @rant = Rant.new
   end
 
   def show
   end
 
   def create
-    @rant = @user.rants.new(params.require(:rant).permit(:title, :body))
+    @rant = Rant.new(params.require(:rant).permit(:title, :body))
     @rant.user_id = (params[:user_id])
     if @rant.save
-      redirect_to user_path(@user), notice: 'Rant was successfully created.'
-      render json: @rant
+      redirect_to rants_path, notice: 'Rant was successfully created.'
     else
       render :new
-      render json: @rant
     end
   end
 
@@ -38,10 +29,8 @@ class RantsController < ApplicationController
     @rant = @user.rants.find(params[:id])
     if @rant.update(params.require(:rant).permit(:title, :body))
       redirect_to user_path(@user), notice: 'Rant was successfully edited.'
-      render json: @rant
     else
       render :edit
-      render json: @rant
     end
   end
 

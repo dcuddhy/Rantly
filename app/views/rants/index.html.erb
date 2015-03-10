@@ -1,0 +1,70 @@
+<% @rants.each do |rant| %>
+  <div class="rant-box">
+
+    <% if rant.user != nil %>
+      <!-- I MADE THIS HIDDEN SO I COULD SHOW THE GRAVITAR -->
+      <h3><% rant.user.full_name %></h3>
+    <% end %>
+
+
+
+    <div class="delete-button">
+      <i class="fa fa-trash-o"></i> Delete
+    </div>
+
+    <div class="cancel-button">
+    <i class="fa fa-sign-in"></i> Cancel
+    </div>
+
+    <div class="body-button">
+      <i class="fa fa-upload"></i> Save
+    </div>
+
+    <div class="body-button">
+      <i class="fa fa-edit"></i> Edit
+    </div>
+
+    <h2><%= link_to rant.title, rant_path(rant) %></h2><br>
+
+    <div class="avatar">
+    </div>
+
+
+    <div class="rant-post">
+      <%= rant.body %>
+    </div>
+
+  </div>
+<% end %>
+
+<br><br><br><br><br>
+<br><br>
+  <table class = "table table-striped">
+    <tr>
+      <th>
+        User
+      </th>
+      <th class = "col-md-3">
+        Title
+      </th>
+
+      <th>
+        Body
+      </th>
+    </tr>
+    <% @rants.each do |rant| %>
+    <tr>
+      <td>
+        <% if rant.user != nil %>
+        <%= rant.user.full_name %>
+        <% end %>
+      </td>
+      <td>
+        <%= link_to rant.title, rant_path(rant) %>
+      </td>
+      <td>
+        <%= rant.body %>
+      </td>
+    <% end %>
+    </tr>
+  </table>

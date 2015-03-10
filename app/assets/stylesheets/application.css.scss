@@ -1,18 +1,95 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "colors";
+@import "buttons";
+
+html{
+  font-family: 'Laila', serif;
+  font-family: 'Hind', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $navBlue;
+  margin: 0;
+}
+
+body{
+  margin: 0;
+}
+
+.container{
+  padding: 0 15px 0 15px;
+  width: 100%;
+}
+
+.rcontainer{
+  margin-left: 15px;
+  padding: 15px;
+  max-width: 69%;
+  min-width: 100px;
+  float: left;
+}
+
+.navbar, .header{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  color: white;
+  padding: 8px 15px 10px 10px;
+}
+
+.navbar{
+  font-size: 32px;
+  background: $navBlue;
+}
+
+.header{
+  font-size: 24px;
+  background: $headerBlue;
+
+}
+
+
+.profile-pic, .avatar{
+  height: 100px;
+  background: url("http://www.gravatar.com/avatar/undefined?s=450") center/cover no-repeat;
+  border-radius: 20px;
+  border-bottom-right-radius: 0;
+  border: 5px dashed $navBlue;
+}
+
+.avatar{
+  float: left;
+  display: inline-block;
+  width: 20%;
+  margin-right: 20px;
+}
+
+.rant-post{
+  display: inline;
+}
+
+.profile-box{
+  float: left;
+  width: 25%;
+  border-right: 1px solid $borderGrey;
+  box-shadow: -1px 2px 1px 1px rgba(225,225,225,0.6);
+  margin-right: 20px;
+}
+
+.rant-box{
+  font-family: 'Hind', sans-serif;
+  display: inline;
+  float: right;
+  width: 100%;
+  padding: 15px;;
+  border: 1px solid $borderGrey;
+  margin: 0 0 15px 0;
+  border-radius: 4px;
+  box-shadow: -1px 1px 1px 1px rgba(225,225,225,0.6);
+  overflow: hidden;
+}
+
+.rant-box h2{
+  font-family: 'Laila', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  display: inline;
+}

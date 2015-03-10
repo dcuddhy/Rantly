@@ -5,19 +5,49 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900|Laila:700|Hind'
+      rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 </head>
 <body>
 
-<div class = "container">
-
-  <% if notice.is_a? String %>
-    <div class="text-center alert alert-info">
-      <%= notice %>
+  <div class= "navbar">
+    <div class="container">
+      Rantly
+        <%= link_to "Rants", "../"  %>
+        <%= link_to "Users", "../users" %>
+        <%= link_to "Sign Up", "../users/new"  %>
     </div>
-  <% end %>
+  </div>
 
-  <%= yield %>
+  <div class="header">
+    <div class="container">
+      Search
+        <%= link_to "New Rant", new_rant_path, class: "new-button"  %>
+    </div>
+  </div>
+
+<div class="container">
+    <div class="profile-box">
+      <div class="profile-pic">
+      </div>
+      <br>
+        <div class="profile-button">
+          Log Out
+        </div>
+    </div>
+
+    <div class="rcontainer">
+
+    <% if notice.is_a? String %>
+      <div class="text-center alert alert-info">
+        <%= notice %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </div>
 </div>
-
 </body>
 </html>
