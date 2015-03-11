@@ -35,9 +35,9 @@ class RantsController < ApplicationController
   end
 
   def destroy
-    rant = Rant.find(params[:id])
-    rant.delete
-    redirect_to foo_path, notice: 'Rant was successfully destroyed.'
+    @rant = Rant.find(params[:id])
+    @rant.destroy
+    redirect_to root_path, notice: 'Rant was successfully destroyed.'
   end
 
 

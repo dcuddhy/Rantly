@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params.require(:user).permit(:first_name, :last_name, :email))
     if @user.save
-      redirect_to user_path(@user), notice: 'User was successfully created.'
+      redirect_to rants_path, notice: 'User was successfully created.'
     else
       render :new
     end

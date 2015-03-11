@@ -2,18 +2,24 @@
 
   <%= render "layouts/errors", object: @rant %>
 
+
+
   <div class="rant-box">
     <div class="rant-head">
       rant head
 
-      <a href= <%= rants_path %> >
-        <div class="body-button">
-          <i class="fa fa-edit"></i> Edit
-        </div>
-      </a>
+    <div class="avatar">
+    </div>
+
+  <div class="delete-button">
+    <i class="fa fa-trash-o"></i>
+    <%= link_to "D-stroy", rant_path(@rant), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+
+<!-- # # # LOOKS GOOD BUT IS A DUMMY BUTTON # # #
     <div class="delete-button">
       <i class="fa fa-trash-o"></i> Delete
-    </div>
+    </div> -->
 
     <div class="cancel-button">
     <i class="fa fa-sign-in"></i> Cancel
@@ -23,9 +29,6 @@
       <i class="fa fa-upload"></i> Save
     </div>
 
-    <div class="body-button">
-      <i class="fa fa-edit"></i> Edit
-    </div>
 
       <h2>rant title</h2><br>
     </div>
@@ -53,16 +56,8 @@ this is janky.  fix it.
 
         <% end %>
 
-
-
-
     </div>
 
   </div>
-
-
-
-
-
 
 </div>

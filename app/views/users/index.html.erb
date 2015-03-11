@@ -4,7 +4,7 @@
         <div class="avatar">
         </div>
         <div>
-          <%= user.full_name %>
+          <%= link_to user.full_name, user_path(user) %><br>
           <span><%= user.email %></span>
         </div>
       </div>
@@ -12,7 +12,6 @@
   </div>
 
 <!--
-
   <table class = "table table-striped">
     <tr>
       <th class = "col-md-3">

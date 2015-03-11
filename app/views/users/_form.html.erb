@@ -1,31 +1,15 @@
-<div class="col-md-8">
   <%= render "layouts/errors", object: @user %>
 
   <%= form_for @user do |f| %>
 
-    <div class="form-group">
-      <%= f.label :first_name, class: "col-md-2" %>
-      <%= f.text_field :first_name, class: "col-md-10" %>
-    </div>
+      <%= f.text_field :first_name, class: "user-form", :placeholder => "First Name" %>
 
-    <div class="form-group">
-      <%= f.label :last_name, class: "col-md-2" %>
-      <%= f.text_field :last_name, class: "col-md-10" %>
-    </div>
+      <%= f.text_field :last_name, class: "user-form", :placeholder => "Last Name" %>
 
-    <div class="form-group">
-      <%= f.label :email, class: "col-md-2" %>
-      <%= f.email_field :email, class: "col-md-10" %>
-    </div>
+      <%= f.email_field :email, class: "user-form", :placeholder => "Email" %>
 
-    <div class="form-group">
-      <%= f.label :password, class: "col-md-2" %>
-      <%= f.password_field :password_digest, class: "col-md-10" %>
-    </div>
+      <%= f.password_field :password_digest, class: "user-form", :placeholder => "Password" %>
 
-    <div class="form-group">
-      <%= f.submit class:"btn btn-primary col-md-offset-2" %>
-    </div>
+      <%= f.submit class:"profile-button" %>
 
   <% end %>
-</div>
