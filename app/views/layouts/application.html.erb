@@ -14,10 +14,10 @@
 
   <div class= "navbar">
     <div class="container">
-      Rantly
-        <%= link_to "Rants", "../"  %>
-        <%= link_to "Users", "../users" %>
-        <%= link_to "Sign Up", "../users/new"  %>
+      <%= link_to "Rantly", root_path  %>
+        <span><%= link_to "Rants", root_path  %></span>
+        <span><%= link_to "Users", users_path %></span>
+        <span><%= link_to "Sign Up", new_user_path  %></span>
     </div>
   </div>
 
@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <div class="rcontainer">
+      <div class="rcontainer">
 
     <% if notice.is_a? String %>
       <div class="text-center alert alert-info">

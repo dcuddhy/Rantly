@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "colors";
 @import "buttons";
+@import "user_tiles";
 
 html{
   font-family: 'Laila', serif;
@@ -16,14 +17,14 @@ body{
 }
 
 .container{
-  padding: 0 15px 0 15px;
+  padding: 0 0 0 15px;
   width: 100%;
 }
 
 .rcontainer{
-  margin-left: 15px;
+  margin-left: -15px;
   padding: 15px;
-  max-width: 69%;
+  max-width: 73.4%;
   min-width: 100px;
   float: left;
 }
@@ -32,7 +33,9 @@ body{
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 900;
   color: white;
-  padding: 8px 15px 10px 10px;
+  padding: 6px 15px 4px 10px;
+  margin: 0;
+  border-radius: 0;
 }
 
 .navbar{
@@ -40,10 +43,26 @@ body{
   background: $navBlue;
 }
 
+.navbar a{
+  color: white;
+  font-size: 32px;
+  background: $navBlue;
+  text-decoration: none;
+}
+
+
+
+.navbar span a{
+  font-size: 16px;
+  padding-left: 20px;
+  vertical-align: 25%;
+  color: white;
+  text-decoration: none;
+}
+
 .header{
   font-size: 24px;
   background: $headerBlue;
-
 }
 
 
@@ -60,6 +79,14 @@ body{
   display: inline-block;
   width: 20%;
   margin-right: 20px;
+}
+
+.rant-head{
+  a{
+  color:$navBlue;
+  text-decoration: none;
+}
+  padding-bottom: 20px;
 }
 
 .rant-post{
@@ -79,7 +106,7 @@ body{
   display: inline;
   float: right;
   width: 100%;
-  padding: 15px;;
+  padding: 15px;
   border: 1px solid $borderGrey;
   margin: 0 0 15px 0;
   border-radius: 4px;
@@ -92,4 +119,8 @@ body{
   font-weight: 700;
   font-size: 30px;
   display: inline;
+}
+
+.wide{
+  width: 600px;
 }

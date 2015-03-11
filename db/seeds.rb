@@ -5,15 +5,14 @@ Rant.delete_all
   User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    email: Faker::Internet.email
-    password: "pass"
+    email: Faker::Internet.email,
+    password_digest: "pass"
   )
 end
 
-5000.times do |i|
+20.times do |i|
   Rant.create!(
-    title: Faker::Lorem.sentence
-(3, true, 4),
+    title: Faker::Lorem.sentence(3, true, 4),
     body: Faker::Lorem.paragraph,
     user_id: Faker::Number.number(3)
   )

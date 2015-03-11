@@ -1,9 +1,18 @@
-<div class="page-header">
-  <%= link_to "New User", new_user_path(@user), class: "btn btn-info pull-right" %>
-  <h2>Users Index</h2>
-</div>
+  <div class="row">
+    <% @users.each do |user| %>
+      <div class="user-tile">
+        <div class="avatar">
+        </div>
+        <div>
+          <%= user.full_name %>
+          <span><%= user.email %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
-<br><br>
+<!--
+
   <table class = "table table-striped">
     <tr>
       <th class = "col-md-3">
@@ -24,4 +33,4 @@
       </td>
     <% end %>
     </tr>
-  </table>
+  </table> -->

@@ -26,18 +26,18 @@ class RantsController < ApplicationController
   end
 
   def update
-    @rant = @user.rants.find(params[:id])
+    @rant = Rant.find(params[:id])
     if @rant.update(params.require(:rant).permit(:title, :body))
-      redirect_to user_path(@user), notice: 'Rant was successfully edited.'
+      redirect_to rants_path, notice: 'Rant was successfully edited.'
     else
       render :edit
     end
   end
 
   def destroy
-    @rant = Rant.find(params[:id])
-    @rant.destroy
-    redirect_to user_path(@user), notice: 'Rant was successfully destroyed.'
+    rant = Rant.find(params[:id])
+    rant.delete
+    redirect_to foo_path, notice: 'Rant was successfully destroyed.'
   end
 
 

@@ -2,22 +2,67 @@
 
   <%= render "layouts/errors", object: @rant %>
 
-  <%= form_for [@user, @rant] do |f| %>
+  <div class="rant-box">
+    <div class="rant-head">
+      rant head
 
-    <div class="form-group">
-      <%= f.label :title, class: "col-md-2" %>
-      <%= f.text_field :title, class: "col-md-10" %>
+      <a href= <%= rants_path %> >
+        <div class="body-button">
+          <i class="fa fa-edit"></i> Edit
+        </div>
+      </a>
+    <div class="delete-button">
+      <i class="fa fa-trash-o"></i> Delete
     </div>
 
-    <div class="form-group">
-      <%= f.label :body, class: "col-md-2" %>
-      <%= f.text_area :body, class: "col-md-10" %>
+    <div class="cancel-button">
+    <i class="fa fa-sign-in"></i> Cancel
     </div>
 
-
-    <div class="form-group">
-      <%= f.submit class:"btn btn-info col-md-offset-2" %>
+    <div class="body-button">
+      <i class="fa fa-upload"></i> Save
     </div>
 
-  <% end %>
+    <div class="body-button">
+      <i class="fa fa-edit"></i> Edit
+    </div>
+
+      <h2>rant title</h2><br>
+    </div>
+
+this is janky.  fix it.
+
+    <div class="rant-post">
+        <%= form_for [@user, @rant] do |f| %>
+
+          <div class="form-group">
+            <%= f.label :title, class: "col-md-2" %>
+            <%= f.text_field :title, class: "wide" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :body, class: "col-md-2" %>
+            <%= f.text_area :body, class: "col-md-10" %>
+          </div>
+
+
+          <div class="form-group">
+            <%= f.submit class:"btn btn-info col-md-offset-2" %>
+
+          </div>
+
+        <% end %>
+
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
 </div>

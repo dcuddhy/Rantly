@@ -1,0 +1,25 @@
+.user-tile {
+  float: left;
+  padding: 15px 15px;
+  margin-left: 15px;
+  width: 23.2%;
+  min-height: 190px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
+  font-size: 12pt;
+  font-family: 'Laila', sans-serif;
+}
+
+.user-tile .avatar{
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.user-tile span{
+  font-size: 8pt;
+}
+
+.row{
+  margin: 0 -15px;
+}
