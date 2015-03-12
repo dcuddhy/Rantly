@@ -4,11 +4,13 @@
 @import "buttons";
 @import "user_tiles";
 @import "user_form";
+@import "fonts";
 
 html{
   font-family: 'Laila', serif;
   font-family: 'Hind', sans-serif;
   font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'flat-ui-icons-regular', sans-serif;
   color: $navBlue;
   margin: 0;
   height: 100%;
@@ -84,14 +86,22 @@ body{
 
 .rant-head{
   width: 100%;
+  padding-bottom: 20px;
+  a{
+  text-decoration: none;
+  }
+}
+
+.rant-head h2{
   a{
   color:$navBlue;
-  text-decoration: none;
-}
-  padding-bottom: 20px;
+  }
 }
 
 .rant-post{
+  width: 100%;
+  padding-top: 150px;
+  clear: both;
   display: inline;
 }
 
@@ -125,14 +135,24 @@ body{
 
 .wide{
   width: 600px;
+  display: inline;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid $borderGrey;
+}
+
+.wide:hover {
+  transition: 0.25s;
+  border-bottom: 2px solid $buttonGreen;
+/* you'll need javascript to keep border bottom styled after mousing away */
 }
 
 .scroll{
-  background: red;
+  background: 3px solid red;
 }
 
 .search{
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'flat-ui-icons-regular', 'Helvetica''Arial', sans-serif;
   border: none;
   outline: none;
   background: $headerBlue;
@@ -141,4 +161,8 @@ body{
 
 .search::-webkit-input-placeholder {
    color: white;
+}
+
+.inline{
+  display: inline;
 }

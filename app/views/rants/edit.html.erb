@@ -1,65 +1,67 @@
-
-
-<div class="col-md-8">
-
   <%= render "layouts/errors", object: @rant %>
 
 
-
   <div class="rant-box">
-    <div class="rant-head">
-      rant head
+    <%= form_for [@user, @rant] do |f| %>
+      <table>
+        <tr class = "rant-head">
+          <th>
 
-    <div class="avatar">
+              <h2><%= f.text_field :title, class: "wide" %></h2>
+
+          </th>
+          <th>
+
+            <div class="delete-button">
+              <%= link_to "Delete", rant_path(@rant), method: :delete, data: { confirm: 'Are you sure?' }, class:"fa fa-trash-o" %>
+            </div>
+
+              <!-- # # # LOOKS GOOD BUT IS A DUMMY BUTTON # # #
+              <div class="delete-button">
+                <i class="fa fa-trash-o"></i> Delete
+              </div> -->
+
+            <div class="cancel-button">
+              <%= link_to "Cancel", '#', class:"fa fa-sign-in" %>
+            </div>
+
+            <div class="">
+              <%= f.submit "Save", class:"fa fa-upload body-button " %>
+            </div>
+
+          </th>
+        </tr>
+        <tr>
+          <td class= "rant-post">
+            <div class="avatar">
+            </div>
+              <%= f.text_area :body %>
+          </td>
+        </tr>
+      </table>
+
+
+
+
+
+
+
+
+
+
+      <div class="rant-head">
+
+
+
+
     </div>
 
-  <div class="delete-button">
-    <i class="fa fa-trash-o"></i>
-    <%= link_to "D-stroy", rant_path(@rant), method: :delete, data: { confirm: 'Are you sure?' } %>
-  </div>
-
-<!-- # # # LOOKS GOOD BUT IS A DUMMY BUTTON # # #
-    <div class="delete-button">
-      <i class="fa fa-trash-o"></i> Delete
-    </div> -->
-
-    <div class="cancel-button">
-    <i class="fa fa-sign-in"></i> Cancel
-    </div>
-
-    <div class="body-button">
-      <i class="fa fa-upload"></i> Save
-    </div>
-
-
-      <h2>rant title</h2><br>
-    </div>
-
-this is janky.  fix it.
 
     <div class="rant-post">
-        <%= form_for [@user, @rant] do |f| %>
-
-          <div class="form-group">
-            <%= f.label :title, class: "col-md-2" %>
-            <%= f.text_field :title, class: "wide" %>
-          </div>
-
-          <div class="form-group">
-            <%= f.label :body, class: "col-md-2" %>
-            <%= f.text_area :body, class: "col-md-10" %>
-          </div>
 
 
-          <div class="form-group">
-            <%= f.submit class:"btn btn-info col-md-offset-2" %>
-
-          </div>
-
-        <% end %>
 
     </div>
 
+    <% end %>
   </div>
-
-</div>

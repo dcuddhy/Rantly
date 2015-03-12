@@ -57,10 +57,16 @@
   height: 30px;
   padding: 0 10px 0 10px;
   float: right;
+  a{
+    color: white;
+  }
 }
 
 .body-button{
   background: $buttonGreen;
+  a{
+    color: white;
+  }
 }
 
 .cancel-button{
@@ -75,16 +81,25 @@
   border: 1px solid $buttonGreen;
   background: white;
   color: $buttonGreen;
+  a{
+    color: $buttonGreen;
+}
 }
 
 .cancel-button:hover{
   border: 1px solid $cancelGrey;
   background: white;
   color: $cancelGrey;
+  a{
+    color: $cancelGrey;
+}
 }
 
 .delete-button:hover{
   border: 1px solid $deleteYellow;
   background: white;
   color: $deleteYellow;
+  a{
+    color: $deleteYellow;
+}
 }

@@ -11,5 +11,5 @@ class User < ActiveRecord::Base
   validates :email, presence: true
   validates :password_digest, presence: true
   validates_uniqueness_of :email, case_sensitive: false
-
+    has_secure_password
 end

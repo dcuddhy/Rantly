@@ -8,11 +8,13 @@
         <h3><% rant.user.full_name %></h3>
       <% end %>
 
-      <a href= <%= edit_rant_path(rant) %> >
-        <div class="body-button">
-          <i class="fa fa-edit"></i> Edit
-        </div>
-      </a>
+      <div class="body-button">
+        <%= link_to "Edit", edit_rant_path(rant), class:"fa fa-edit" %>
+      </div>
+
+      <div class="cancel-button">
+        <%= link_to "Cancel", '#', class:"fa fa-sign-in" %>
+      </div>
 
       <h2><%= link_to rant.title, rant_path(rant) %></h2><br>
     </div>
