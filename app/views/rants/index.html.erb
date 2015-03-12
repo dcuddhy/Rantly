@@ -1,6 +1,6 @@
 <div class="scroll">
 
-<% @rants.each do |rant| %>
+<% @rants.reverse_each do |rant| %>
   <div class="rant-box">
     <div class="rant-head">
       <% if rant.user != nil %>
