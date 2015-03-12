@@ -17,7 +17,7 @@ class RantsController < ApplicationController
     if @rant.save
       redirect_to rants_path, notice: 'Rant was successfully created.'
     else
-      render :new
+      render :new, notice: "You've gotta say more than that!"
     end
   end
 
