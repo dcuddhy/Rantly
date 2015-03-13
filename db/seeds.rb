@@ -13,7 +13,7 @@ end
 20.times do |i|
   Rant.create!(
     title: Faker::Lorem.sentence(3, true, 4),
-    body: Faker::Lorem.paragraph,
+    body: Faker::Lorem.paragraph(6, false, 4),
     user_id: Faker::Number.number(3)
   )
 end
