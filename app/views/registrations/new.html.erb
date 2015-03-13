@@ -1,4 +1,8 @@
+reg new
+
   <%= render "layouts/errors", object: @user %>
+
+<div class="form">
 
   <%= form_for @user do |f| %>
 
@@ -8,8 +12,10 @@
 
       <%= f.email_field :email, class: "user-form", :placeholder => "Email" %>
 
-      <%= f.password_field :password, class: "user-form", :placeholder => "Password" %>
+      <%= f.password_field :password_digest, class: "user-form", :placeholder => "Password" %>
 
-      <%= f.submit class:"profile-button" %>
+      <%= f.submit "Log In", class:"profile-button" %>
 
   <% end %>
+
+</div>

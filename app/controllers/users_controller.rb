@@ -13,10 +13,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params.require(:user).permit(:first_name, :last_name, :email, :password_digest))
+    @user = User.new(params.require(:user).permit(:first_name, :last_name, :email, :password))
     if @user.save
       session[:user_id] = @user.id
-      redirect_to rants_path, notice: 'User was successfully created.'
+      redirect_to rants_path, notice: 'Thanks for signing up for Rantly!'
     else
       render :new
     end
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update(params.require(:user).permit(:first_name, :last_name, :email, :password_digest))
+    if @user.update(params.require(:user).permit(:first_name, :last_name, :email, :password))
       redirect_to user_path(@user), notice: 'User was successfully edited.'
     else
       render :edit

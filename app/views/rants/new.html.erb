@@ -4,21 +4,12 @@
     <%= form_for [@user, @rant] do |f| %>
       <div class="rant-head">
 
-        <div class="cancel-button">
-        <i class="fa fa-sign-in"></i> Cancel
-        </div>
+          <%= link_to " Cancel", '#', class:"cancel-button fa fa-sign-in" %>
 
-          <div class="form-group">
-            <%= f.submit "FOO", class:"fa fa-upload body-button" %>
-          </div>
-
-        <div class="body-button">
-          <i class="fa fa-upload"></i> Save
-        </div>
-
+          <%= f.submit "Save", class:"body-button fa fa-upload" %>
 
         <div class="form-group">
-          <%= f.text_field :title, class: "wide", :placeholder => "Rant Title" %>
+          <h2><%= f.text_field :title, class: "wide", :placeholder => "Rant Title" %></h2>
         </div>
     </div>
 
