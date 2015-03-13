@@ -20,6 +20,9 @@
         <span><%= link_to "Sign Up", signup_path  %></span>
         <span><%= link_to "Sign In", signin_path  %></span>
         <span><%= link_to "Sign Out", signout_path  %></span>
+        <% if current_user %>
+          <span class = "pull-right"><%= current_user.full_name %></span>
+        <% end %>
     </div>
   </div>
 
