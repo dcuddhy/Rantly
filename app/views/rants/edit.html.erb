@@ -12,22 +12,18 @@
           </th>
           <th>
 
-            <div class="delete-button">
-              <%= link_to "Delete", rant_path(@rant), method: :delete, data: { confirm: 'Are you sure?' }, class:"fa fa-trash-o" %>
-            </div>
+
+              <%= link_to " Delete", rant_path(@rant), method: :delete, data: { confirm: 'Are you sure?' }, class:"delete-button fa fa-trash-o" %>
 
               <!-- # # # LOOKS GOOD BUT IS A DUMMY BUTTON # # #
               <div class="delete-button">
                 <i class="fa fa-trash-o"></i> Delete
               </div> -->
 
-            <div class="cancel-button">
-              <%= link_to "Cancel", '#', class:"fa fa-sign-in" %>
-            </div>
+              <%= link_to " Cancel", '#', class:"cancel-button fa fa-sign-in" %>
 
-            <div class="">
-              <%= f.submit "Save", class:"fa fa-upload body-button " %>
-            </div>
+
+              <%= f.submit "Save", class:"body-button fa fa-upload" %>
 
           </th>
         </tr>
