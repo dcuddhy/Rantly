@@ -13,7 +13,7 @@ class RantsController < ApplicationController
 
   def create
     @rant = Rant.new(params.require(:rant).permit(:title, :body))
-    @rant.user_id = (params[:user_id])
+    @rant.user_id = current_user.id
     if @rant.save
       redirect_to rants_path, notice: 'Rant was successfully created.'
     else

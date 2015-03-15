@@ -3,12 +3,14 @@
 <% @rants.reverse_each do |rant| %>
   <div class="rant-box">
     <div class="rant-head">
+
       <% if rant.user != nil %>
-        <!-- I MADE THIS HIDDEN SO I COULD SHOW THE GRAVITAR -->
-        <h3><% rant.user.full_name %></h3>
+        <h3><%= rant.user.full_name %></h3>
       <% end %>
 
+      <% if rant.user == current_user %>
         <%= link_to "Edit", edit_rant_path(rant), class: "body-button fa fa-edit" %>
+      <% end %>
 
       <h2><%= link_to rant.title, rant_path(rant) %></h2><br>
     </div>

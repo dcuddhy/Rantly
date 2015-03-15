@@ -1,6 +1,14 @@
 User.delete_all
 Rant.delete_all
 
+User.create!(
+  first_name: "Basic",
+  last_name: "User",
+  email: "user@example.com",
+  password: "pass"
+)
+
+
 10.times do |i|
   User.create!(
     first_name: Faker::Name.first_name,
@@ -14,6 +22,6 @@ end
   Rant.create!(
     title: Faker::Lorem.sentence(3, true, 4),
     body: Faker::Lorem.paragraph(6, false, 4),
-    user_id: Faker::Number.number(3)
+    user_id: Faker::Number.number(2)
   )
 end

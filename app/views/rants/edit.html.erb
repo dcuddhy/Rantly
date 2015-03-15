@@ -1,18 +1,14 @@
   <%= render "layouts/errors", object: @rant %>
 
-
-  <div class="rant-box">
-    <%= form_for [@user, @rant] do |f| %>
-      <table>
-        <tr class = "rant-head">
-          <th>
-
+  <% if @rant.user == current_user %>
+    <div class="rant-box">
+      <%= form_for [@user, @rant] do |f| %>
+        <table>
+          <tr class = "rant-head">
+            <th>
               <h2><%= f.text_field :title, class: "wide" %></h2>
-
-          </th>
-          <th>
-
-
+            </th>
+            <th>
               <%= link_to " Delete", rant_path(@rant), method: :delete, data: { confirm: 'Are you sure?' }, class:"delete-button fa fa-trash-o" %>
 
               <!-- # # # LOOKS GOOD BUT IS A DUMMY BUTTON # # #
@@ -22,42 +18,19 @@
 
               <%= link_to " Cancel", '#', class:"cancel-button fa fa-sign-in" %>
 
-
               <%= f.submit "Save", class:"body-button fa fa-upload" %>
 
-          </th>
-        </tr>
-        <tr>
-          <td class= "rant-post">
-            <div class="avatar">
-            </div>
-              <%= f.text_area :body %>
-          </td>
-        </tr>
-      </table>
-
-
-
-
-
-
-
-
-
-
-      <div class="rant-head">
-
-
-
+            </th>
+          </tr>
+          <tr>
+            <td class= "rant-post">
+              <div class="avatar">
+              </div>
+                <%= f.text_area :body %>
+            </td>
+          </tr>
+        </table>
+      <% end %>
 
     </div>
-
-
-    <div class="rant-post">
-
-
-
-    </div>
-
-    <% end %>
-  </div>
+  <% end %>

@@ -1,29 +1,23 @@
+<div class="scroll">
 
+<% @user.rants.reverse_each do |rant| %>
+  <div class="rant-box">
+    <div class="rant-head">
 
-<h2>Rants</h2>
-<table class = "table table-striped">
-  <th class = "col-md-3">
-    Title
-  </th>
-  <th class = "col-md-9">
-    Body
-  </th>
-  <th>
-  </th>
+      <% if rant.user == current_user %>
+        <%= link_to "Edit", edit_rant_path(rant), class: "body-button fa fa-edit" %>
+      <% end %>
 
-  <tr>
-    <% @user.rants.each do |rant| %>
-    <td class = "col-md-3">
-      <%= rant.title %><br>
-    </td>
-    <td class = "col-md-9">
-      <%= rant.body %><br>
-    </td>
-    <td>
-      <%= link_to "Edit", edit_user_rant_path(@user, rant) %>
-    </td>
-  </tr>
-    <% end %>
-</table>
+      <h2><%= link_to rant.title, rant_path(rant) %></h2><br>
+    </div>
 
-  <%= link_to "Delete User", user_path(@user), :method => :delete, class: "btn btn-danger pull-right" %>
+    <div class="avatar">
+    </div>
+
+    <div class="rant-post">
+      <%= rant.body %>
+    </div>
+
+  </div>
+<% end %>
+</div>
