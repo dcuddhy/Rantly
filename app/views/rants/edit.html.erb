@@ -9,14 +9,10 @@
               <h2><%= f.text_field :title, class: "wide" %></h2>
             </th>
             <th>
-              <%= link_to " Delete", rant_path(@rant), method: :delete, data: { confirm: 'Are you sure?' }, class:"delete-button fa fa-trash-o" %>
+              <%= link_to " Delete", rant_path(@rant), method: :delete, data:
+              { confirm: 'Are you sure?' }, class:"delete-button fa fa-trash-o" %>
 
-              <!-- # # # LOOKS GOOD BUT IS A DUMMY BUTTON # # #
-              <div class="delete-button">
-                <i class="fa fa-trash-o"></i> Delete
-              </div> -->
-
-              <%= link_to " Cancel", '#', class:"cancel-button fa fa-sign-in" %>
+              <%= link_to " Cancel", rants_path, class:"cancel-button fa fa-sign-in" %>
 
               <%= f.submit "Save", class:"body-button fa fa-upload" %>
 
