@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   post '/signin' => 'authentication#create'
   get '/signout' => 'authentication#destroy', as: :signout
 
-
-
   resources :users
   resources :rants
 

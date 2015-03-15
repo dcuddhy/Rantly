@@ -32,16 +32,11 @@
   height: 30px;
 }
 
-.profile-box .profile-button{
-  line-height: 1.8;
-}
-
 .profile-button:hover{
   border: 1px solid $buttonGreen;
   background: white;
   color: $buttonGreen;
 }
-
 
 .body-button, .cancel-button, .delete-button{
   color: white;
@@ -83,7 +78,7 @@
   color: $buttonGreen;
   a{
     color: $buttonGreen;
-}
+  }
 }
 
 .cancel-button:hover{
@@ -92,7 +87,7 @@
   color: $cancelGrey;
   a{
     color: $cancelGrey;
-}
+  }
 }
 
 .delete-button:hover{
@@ -101,5 +96,5 @@
   color: $deleteYellow;
   a{
     color: $deleteYellow;
-}
+  }
 }

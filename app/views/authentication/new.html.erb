@@ -2,7 +2,7 @@ authentication, new page
 
 
 
-<%= form_tag signin_path do |f| %>
+<%= form_tag @user do |f| %>
 
   <div class="form-group">
     <%= label_tag :email %>
@@ -20,5 +20,3 @@ authentication, new page
   </div>
 
 <% end %>
-
-</div>

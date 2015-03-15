@@ -7,7 +7,7 @@ class AuthenticationController < ApplicationController
       redirect_to rants_path
     else
       @sign_in_error = "Username / password combination is invalid"
-      render :new
+      redirect_to rants_path
     end
   end
 

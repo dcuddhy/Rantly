@@ -33,14 +33,25 @@
 
 <div class="container">
     <div class="profile-box">
-      <div class="profile-pic">
-      </div>
-      <br>
-          <% if current_user == nil %>
-            <%= link_to "Sign In", signin_path, class: "profile-button"  %>
-          <% else %>
-            <%= link_to "Log Out", signout_path, class: "profile-button"  %>
-          <% end %>
+      <% if current_user == nil %>
+        <br>
+        <%= form_tag signin_path do |f| %>
+          <div class="">
+            <%= email_field_tag :email, nil, class:"form-control", placeholder: "Your email" %>
+          </div><br>
+          <div class="">
+            <%= password_field_tag :password, nil, class:"form-control", placeholder: "Your password" %>
+          </div><br>
+          <div class="">
+            <%= submit_tag "Sign in", class: "profile-button" %>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="profile-pic">
+        </div>
+        <br>
+        <%= link_to "Log Out", signout_path, class: "profile-button"  %>
+      <% end %>
     </div>
 
 

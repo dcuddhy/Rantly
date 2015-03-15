@@ -4,9 +4,9 @@
   <div class="rant-box">
     <div class="rant-head">
 
-      <% if rant.user != nil %>
+      <!-- <% if rant.user != nil %>
         <h3><%= rant.user.full_name %></h3>
-      <% end %>
+      <% end %> -->
 
       <% if rant.user == current_user %>
         <%= link_to "Edit", edit_rant_path(rant), class: "body-button fa fa-edit" %>

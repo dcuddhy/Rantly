@@ -45,5 +45,4 @@ class RantsController < ApplicationController
     end
   end
 
-
 end
