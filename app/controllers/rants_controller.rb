@@ -5,7 +5,11 @@ class RantsController < ApplicationController
   end
 
   def new
-    @rant = Rant.new
+    if current_user
+      @rant = Rant.new
+    else
+      redirect_to rants_path, notice: 'You must log in!'
+    end
   end
 
   def show

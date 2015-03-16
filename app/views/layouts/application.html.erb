@@ -42,15 +42,13 @@
           <div class="">
             <%= password_field_tag :password, nil, class:"form-control", placeholder: "Your password" %>
           </div><br>
-          <div class="">
-            <%= submit_tag "Sign in", class: "profile-button" %>
-          </div>
+            <%= submit_tag "Log In", class: "profile-button" %>
         <% end %>
       <% else %>
         <div class="profile-pic">
         </div>
         <br>
-        <%= link_to "Log Out", signout_path, class: "profile-button"  %>
+        <%= link_to "Log Out", signout_path, class: "profile-button drop"  %>
       <% end %>
     </div>
 
