@@ -1,4 +1,6 @@
-  <%= render "layouts/errors", object: @user %>
+  <% content_for :side_error do %>
+    <br><%= render "layouts/errors", object: @user %>
+  <% end %>
 
   <%= form_for @user do |f| %>
 

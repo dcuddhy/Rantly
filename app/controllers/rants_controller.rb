@@ -2,6 +2,7 @@ class RantsController < ApplicationController
 
   def index
     @rants = Rant.all
+    @rants = Rant.search(params[:search])
   end
 
   def new

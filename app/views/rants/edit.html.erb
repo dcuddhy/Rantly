@@ -1,4 +1,6 @@
-  <%= render "layouts/errors", object: @rant %>
+  <% content_for :side_error do %>
+    <br><%= render "layouts/errors", object: @rant %>
+  <% end %>
 
   <% if @rant.user == current_user %>
     <div class="rant-box">

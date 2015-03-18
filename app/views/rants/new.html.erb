@@ -1,4 +1,6 @@
-  <%= render "layouts/errors", object: @rant %>
+<% content_for :side_error do %>
+  <br><%= render "layouts/errors", object: @rant %>
+<% end %>
 
   <div class="rant-box">
     <%= form_for [@user, @rant] do |f| %>
@@ -20,9 +22,6 @@
           <div class="form-group">
             <%= f.text_area :body, class: "col-md-offset-4 col-md-8", :placeholder => "Start your rant." %>
           </div>
-
-
-
 
         <% end %>
     </div>

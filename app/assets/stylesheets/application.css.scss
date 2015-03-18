@@ -158,6 +158,8 @@ body{
   outline: none;
   background: $headerBlue;
   color: $navBlue;
+  width: 300px;
+  display: inline;
 }
 
 .search::-webkit-input-placeholder {

@@ -1,7 +1,8 @@
 <div class="col-md-8">
 
-  <%= render "layouts/errors", object: @rant %>
-
+  <% content_for :side_error do %>
+    <br><%= render "layouts/errors", object: @rant %>
+  <% end %>
 
 
   <div class="rant-box">
