@@ -33,6 +33,7 @@ body{
   width: 73.4%;
   min-width: 100px;
   float: left;
+  height: 100%;
 }
 
 .navbar, .header{
@@ -165,6 +166,8 @@ body{
 .scroll{
   background: 3px solid red;
   width: 100%;
+  height: 100%;
+  overflow: scroll;
 }
 
 .search{
