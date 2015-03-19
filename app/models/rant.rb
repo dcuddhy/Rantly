@@ -7,7 +7,7 @@ class Rant < ActiveRecord::Base
   validates :body, length: { minimum: 144 }
 
   def self.search(search)
-    where("body LIKE ? or title LIKE ?", "%#{search}%", "%#{search}%")
+    where("body ILIKE ? or title ILIKE ?", "%#{search}%", "%#{search}%")
   end
 
 end
