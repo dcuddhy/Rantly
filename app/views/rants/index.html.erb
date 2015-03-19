@@ -1,27 +1,35 @@
 <div class="scroll">
 
-<% @rants.reverse_each do |rant| %>
-  <div class="rant-box">
-    <div class="rant-head">
+  <% if @rants.count > 0 %>
+    <% @rants.reverse_each do |rant| %>
+      <div class="rant-box">
+        <div class="rant-head">
 
-      <!-- <% if rant.user != nil %>
-        <h3><%= rant.user.full_name %></h3>
-      <% end %> -->
+          <!-- <% if rant.user != nil %>
+            <h3><%= rant.user.full_name %></h3>
+          <% end %> -->
 
-      <% if rant.user == current_user %>
-        <%= link_to "Edit", edit_rant_path(rant), class: "body-button fa fa-edit" %>
-      <% end %>
+          <% if rant.user == current_user %>
+            <%= link_to "Edit", edit_rant_path(rant), class: "body-button fa fa-edit" %>
+          <% end %>
 
-      <h2><%= link_to rant.title, rant_path(rant) %></h2><br>
+          <h2><%= link_to rant.title, rant_path(rant) %></h2><br>
+        </div>
+
+        <div class="avatar">
+        </div>
+
+        <div class="rant-post">
+          <%= rant.body %>
+        </div>
+
+      </div>
+    <% end %>
+
+  <% else %>
+    <div class="rant-box">
+      <h2>These are not the droids you're looking for</h2>
     </div>
+  <% end %>
 
-    <div class="avatar">
-    </div>
-
-    <div class="rant-post">
-      <%= rant.body %>
-    </div>
-
-  </div>
-<% end %>
 </div>

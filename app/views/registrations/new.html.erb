@@ -1,19 +1,11 @@
-reg new
-
 <div class="form">
 
   <%= form_for @user do |f| %>
-
-      <%= f.text_field :first_name, class: "user-form", placeholder: "First Name" %>
-
-      <%= f.text_field :last_name, class: "user-form", placeholder: "Last Name" %>
-
-      <%= f.email_field :email, class: "user-form", placeholder: "Email" %>
-
-      <%= f.password_field :password, class: "user-form", placeholder: "Password" %>
-
-      <%= f.submit "Log In", class:"profile-button" %>
-
+    <%= f.text_field :first_name, class: "user-form", placeholder: "First Name" %>
+    <%= f.text_field :last_name, class: "user-form", placeholder: "Last Name" %>
+    <%= f.email_field :email, class: "user-form", placeholder: "Email" %>
+    <%= f.password_field :password, class: "user-form", placeholder: "Password" %>
+    <%= f.submit "Log In", class:"profile-button" %>
   <% end %>
 
 </div>

@@ -5,29 +5,19 @@
   <% if @rant.user == current_user %>
     <div class="rant-box">
       <%= form_for [@user, @rant] do |f| %>
-        <table>
-          <tr class = "rant-head">
-            <th>
+          <div class = "rant-head">
               <h2><%= f.text_field :title, class: "wide" %></h2>
-            </th>
-            <th>
               <%= link_to " Delete", rant_path(@rant), method: :delete, data:
               { confirm: 'Are you sure?' }, class:"delete-button fa fa-trash-o" %>
-
               <%= link_to " Cancel", rants_path, class:"cancel-button fa fa-sign-in" %>
-
               <%= f.submit "Save", class:"body-button fa fa-upload" %>
+          </div>
 
-            </th>
-          </tr>
-          <tr>
-            <td class= "rant-post">
+            <div class= "rant-post">
               <div class="avatar">
               </div>
-                <%= f.text_area :body %>
-            </td>
-          </tr>
-        </table>
+                <%= f.text_area :body, class:"text-area" %>
+            </div>
       <% end %>
 
     </div>
