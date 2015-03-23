@@ -111,12 +111,26 @@ body{
 .text-area{
   float: left;
   width: 77%;
-  min-height: 100px;
+  height: 400px;
   outline: none;
   resize: none;
-  border: none;
-/*   # # # # need js to adjust height per needs # # # #
- */}
+  border-radius: 3px;
+  border: 3px solid $inactiveGrey;
+/*   # # # # need js to adjust height per needs # # # # */
+}
+
+.text-area:hover, .user-form:hover {
+  transition: 0.4s;
+  border: 2px solid $buttonGreen;
+/* you'll need javascript to keep border bottom styled after mousing away */
+}
+
+.user-form{
+  width: 100%;
+  padding:10px;
+  font-size: 16pt;
+  margin-bottom: 15px;
+}
 
 .profile-box{
   float: left;
@@ -149,8 +163,7 @@ body{
 
 .wide{
   float: left;
-  max-width: 600px;
-  min-width: 200px;
+  width: 70%;
   display: inline;
   outline: none;
   border: none;
@@ -187,4 +200,15 @@ body{
 
 .inline{
   display: inline;
+}
+
+.clear{
+  opacity: 0;
+  border: 0px solid white;
+}
+
+.clear:hover{
+  background: white;
+  border: 0px solid white;
+  transition: 0.25s;
 }

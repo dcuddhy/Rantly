@@ -5,25 +5,16 @@
   <div class="rant-box">
     <%= form_for [@user, @rant] do |f| %>
       <div class="rant-head">
+        <%= link_to " Cancel", '#', class:"cancel-button fa fa-sign-in" %>
+          <button class="body-button fa fa-upload lift"> Save</button>
+        <h2><%= f.text_field :title, class: "wide", :placeholder => "Rant Title" %></h2>
+      </div>
 
-          <%= link_to " Cancel", '#', class:"cancel-button fa fa-sign-in" %>
-
-          <%= f.submit "Save", class:"body-button fa fa-upload" %>
-
-        <div class="form-group">
-          <h2><%= f.text_field :title, class: "wide", :placeholder => "Rant Title" %></h2>
-        </div>
-    </div>
-
+    <div class="rant-post">
     <div class="avatar">
     </div>
-    <div class="rant-post">
-
-          <div class="form-group">
-            <%= f.text_area :body, class: "col-md-offset-4 col-md-8", :placeholder => "Start your rant." %>
-          </div>
-
-        <% end %>
+      <%= f.text_area :body, class:"text-area", :placeholder => "Start your rant." %>
+      <% end %>
     </div>
   </div>
 
