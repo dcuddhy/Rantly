@@ -3,7 +3,9 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'autoprefixer-rails'
 
-gem 'rails_12factor'
+group :production do
+  gem 'rails_12factor'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
