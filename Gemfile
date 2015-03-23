@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'autoprefixer-rails'
-gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -20,6 +19,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 
 group :development, :test do
+  gem 'faker'
   gem 'byebug'
   gem 'bcrypt'
   gem 'rspec-rails', '~> 3.2.0'
