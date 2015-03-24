@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  require 'gravtastic'  
 
   def index
     @users = User.all

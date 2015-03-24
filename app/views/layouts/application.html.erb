@@ -28,8 +28,12 @@
     <div class="container">
 
       <%= form_tag search_path, class:"search", :method => 'get' do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search", class: "search" %>
+        <% if params['search'] == "" %>
+          <%= text_field_tag :search, params[:search], placeholder: "This can't be blank!", class: "search" %>
+        <% else %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search", class: "search" %>
         <!-- <%= submit_tag "Search", :name => nil, class: "btn btn-warning" %> -->
+        <% end %>
       <% end %>
 
       <%= link_to "New Rant", new_rant_path, class: "new-button"  %>
@@ -51,6 +55,7 @@
         <% end %>
       <% else %>
         <div class="profile-pic">
+          <%= image_tag current_user.gravatar_url %>
         </div>
         <br>
         <%= link_to "Log Out", signout_path, class: "profile-button drop"  %>

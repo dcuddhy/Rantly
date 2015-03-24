@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  require 'gravtastic'
+
 
   def full_name
     "#{first_name} #{last_name}"
@@ -11,4 +13,8 @@ class User < ActiveRecord::Base
   validates :email, presence: true
   validates_uniqueness_of :email, case_sensitive: false
   has_secure_password
+
+  include Gravtastic
+  gravtastic
+
 end

@@ -70,18 +70,21 @@ body{
   background: $headerBlue;
 }
 
-.profile-pic, .avatar{
+.profile-pic, .avatar img{
   height: 100px;
   background: url("http://www.gravatar.com/avatar/undefined?s=450") center/cover no-repeat;
   border-radius: 20px;
   border-bottom-right-radius: 0;
   border: 5px dashed $navBlue;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .avatar{
   clear: both;
   float: left;
-  display: inline-block;
+  display: inline;
   width: 20%;
   margin-right: 20px;
 }
@@ -103,7 +106,6 @@ body{
 
 .rant-post{
   width: 100%;
-  padding-top: 150px;
   clear: both;
   display: inline;
 }
@@ -119,7 +121,7 @@ body{
 /*   # # # # need js to adjust height per needs # # # # */
 }
 
-.text-area:hover, .user-form:hover {
+.text-area:focus, .user-form:focus {
   transition: 0.4s;
   border: 2px solid $buttonGreen;
 /* you'll need javascript to keep border bottom styled after mousing away */
