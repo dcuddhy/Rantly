@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  require 'gravtastic'
 
 
   def full_name
