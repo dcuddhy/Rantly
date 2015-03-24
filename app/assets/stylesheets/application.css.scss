@@ -111,7 +111,7 @@ body{
 }
 
 .text-area{
-  float: left;
+  float: right;
   width: 77%;
   height: 400px;
   outline: none;
@@ -213,4 +213,9 @@ body{
   background: white;
   border: 0px solid white;
   transition: 0.25s;
+}
+
+.count{
+  float: left;
+  display: block;
 }
