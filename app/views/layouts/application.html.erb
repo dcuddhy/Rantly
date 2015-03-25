@@ -54,8 +54,9 @@
             <%= submit_tag "Log In", class: "profile-button" %>
         <% end %>
       <% else %>
-        <div class="profile-pic">
-          <%= image_tag current_user.gravatar_url %>
+          <div class="profile-pic" style="background-image: url('<%= current_user.gravatar_url %>')">
+
+          <!-- <%= image_tag current_user.gravatar_url %> -->
         </div>
         <br>
         <%= link_to "Log Out", signout_path, class: "profile-button drop"  %>
