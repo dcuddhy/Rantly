@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  require 'gravtastic'  
+
+  before_action :correct_user, only: [:edit, :update, :destroy]
+
 
   def index
     @users = User.all
@@ -42,5 +44,10 @@ class UsersController < ApplicationController
     redirect_to users_path, notice: 'User was successfully destroyed.'
   end
 
+private
+  def correct_user
+    @rant = current_user.rants.find_by(id: params[:id])
+    redirect_to root_path, notice: "not authorized to edit the rant" if @rant.nil?
+  end
 
 end

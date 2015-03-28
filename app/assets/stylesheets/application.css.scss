@@ -173,7 +173,7 @@ body{
   margin-bottom: 20px;
 }
 
-.wide:hover {
+.wide:focus {
   transition: 0.25s;
   border-bottom: 2px solid $buttonGreen;
 /* you'll need javascript to keep border bottom styled after mousing away */
@@ -217,4 +217,23 @@ body{
 .count{
   float: left;
   display: block;
+}
+
+.scroll{
+    position: relative;
+
+    animation-name: fade;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .5s;
+
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

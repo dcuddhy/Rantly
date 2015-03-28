@@ -1,7 +1,9 @@
 class RantsController < ApplicationController
+  before_action :owner_check, only: [:edit, :update, :destroy]
 
   def index
     @rants = Rant.search(params[:search])
+    @user = User.all
   end
 
   def new
@@ -46,6 +48,13 @@ class RantsController < ApplicationController
       redirect_to root_path, notice: "Rant was successfully destroyed."
     else
       render :edit, notice: "Cannot delete this rant"
+    end
+  end
+
+  def owner_check
+    @rant = current_user.rants.find_by(id: params[:id])
+    if @rant.nil?
+    redirect_to root_path, notice: "Who do you think you are?!"
     end
   end
 
