@@ -117,13 +117,12 @@ body{
   resize: none;
   border-radius: 3px;
   border: 3px solid $inactiveGrey;
-/*   # # # # need js to adjust height per needs # # # # */
+/*   # # # # drew cuddhy rules # # # # */
 }
 
 .text-area:focus, .user-form:focus {
   transition: 0.4s;
   border: 2px solid $buttonGreen;
-/* you'll need javascript to keep border bottom styled after mousing away */
 }
 
 .user-form{
