@@ -4,8 +4,6 @@
 @import "buttons";
 @import "user_tiles";
 @import "user_form";
-@import "fonts";
-@import "animate";
 
 html{
   font-family: 'Laila', serif;
@@ -157,7 +155,7 @@ body{
   overflow: hidden;
 }
 
-.rant-box h2{
+.rant-box h2, .empty-result h2{
   font-family: 'Laila', sans-serif;
   font-weight: 700;
   font-size: 30px;
