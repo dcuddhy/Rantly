@@ -1,1 +1,22 @@
-rants show
+<div class="scroll">
+
+      <div class="rant-box">
+        <div class="rant-head">
+
+          <% if @rant.user == current_user %>
+            <%= link_to "Edit", edit_rant_path(@rant), class: "body-button fa fa-edit" %>
+          <% end %>
+
+          <h2><%= @rant.title %></h2><br>
+        </div>
+
+        <div class="avatar">
+        </div>
+
+        <div class="rant-post">
+          <%= @rant.body %>
+        </div>
+
+      </div>
+
+</div>
