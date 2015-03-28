@@ -1,5 +1,5 @@
 function updateCountdown() {
-    // 140 is the max message length
+    // live character count
     var remaining = jQuery('.message').val().length;
     jQuery('.count').text(remaining + ' Characters');
 }

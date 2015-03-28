@@ -54,7 +54,7 @@ class RantsController < ApplicationController
   def owner_check
     @rant = current_user.rants.find_by(id: params[:id])
     if @rant.nil?
-    redirect_to root_path, notice: "Who do you think you are?!"
+      redirect_to root_path, notice: "Who do you think you are?!"
     end
   end
 

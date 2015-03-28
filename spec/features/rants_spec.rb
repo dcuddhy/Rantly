@@ -34,7 +34,7 @@ feature "User can only execute CRUD functions when logged in" do
 
   end
 
-  scenario "Non-user cannot seed edit button for rant" do
+  scenario "User cannot edit other users' rants" do
 
     visit root_path
     click_on "Sign Up"
@@ -57,9 +57,20 @@ feature "User can only execute CRUD functions when logged in" do
     expect(page).to have_no_content("Murray")
     expect(page).to have_no_content("Edit")
 
+    visit root_path
+    click_on "Sign Up"
+    fill_in "First Name", with: "Hulk"
+    fill_in "Last Name", with: "Hogan"
+    fill_in "Email", with: "hh@hh.com"
+    fill_in "Password", with: "password"
+    within ".form" do
+      click_on "Log In"
+    end
+
+    expect(page).to have_content("Thanks for signing up for Rantly!")
+    expect(page).to have_no_content("Edit")
+
   end
-
-
 
   scenario "User can edit a rant" do
     visit root_path

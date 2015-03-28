@@ -5,6 +5,7 @@
 @import "user_tiles";
 @import "user_form";
 @import "fonts";
+@import "animate";
 
 html{
   font-family: 'Laila', serif;
@@ -219,14 +220,13 @@ body{
   display: block;
 }
 
-.scroll{
+.scroll, .avatar{
     position: relative;
 
     animation-name: fade;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
-    animation-duration: .5s;
-
+    animation-duration: .4s;
 }
 
 @keyframes fade {

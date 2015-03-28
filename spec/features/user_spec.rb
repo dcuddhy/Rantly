@@ -34,7 +34,7 @@ feature "Sign Up" do
 
   end
 
-  scenario "User can can log out" do
+  scenario "User can can log back in" do
     visit root_path
     click_on "Sign Up"
     fill_in "First Name", with: "Bill"
