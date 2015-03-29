@@ -18,6 +18,11 @@
 .has-feedback .form-control-feedback{
   margin: 10px 10px 0 0;
 }
+
+.lower-glyphicon .form-control-feedback{
+  margin: 16px 10px 0 0;
+}
+
 .has-feedback .fa-user, .has-feedback .fa-lock{
   color: $inactiveGrey;
   font-size: 16pt;
