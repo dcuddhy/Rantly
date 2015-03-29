@@ -45,11 +45,14 @@
       <% if current_user == nil %>
         <br>
         <%= form_tag signin_path do |f| %>
-          <div class="">
+
+          <div class="has-feedback">
             <%= email_field_tag :email, nil, class:"user-form", placeholder: "Your email" %>
+              <i class="fa fa-user form-control-feedback"></i>
           </div>
-          <div class="">
+          <div class="has-feedback">
             <%= password_field_tag :password, nil, class:"user-form", placeholder: "Your password" %>
+              <i class="fa fa-lock form-control-feedback"></i>
           </div>
             <%= submit_tag "Log In", class: "profile-button" %>
         <% end %>
