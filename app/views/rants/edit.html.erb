@@ -7,8 +7,8 @@
       <%= form_for [@user, @rant] do |f| %>
           <div class = "rant-head">
               <h2><%= f.text_field :title, class: "wide" %></h2>
-              <%= link_to " Delete", rant_path(@rant), method: :delete, data:
-              { confirm: 'Are you sure?' }, class:"delete-button fa fa-trash-o" %>
+              <%= link_to " Delete", rant_path(@rant), method: :delete,
+              class:"delete-button fa fa-trash-o" %>
               <%= link_to " Cancel", rants_path, class:"cancel-button fa fa-sign-in" %>
 
               <button class="body-button fa fa-upload lift"> Save</button>

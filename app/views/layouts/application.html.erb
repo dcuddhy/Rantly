@@ -57,14 +57,10 @@
             <%= submit_tag "Log In", class: "profile-button" %>
         <% end %>
       <% else %>
-          <div class="profile-pic" style="background-image: url('<%= current_user.gravatar_url %>')">
-
-          <!-- <%= image_tag current_user.gravatar_url %> -->
+        <div class="profile-pic" style="background-image: url('<%= current_user.gravatar_url %>')">
         </div>
-        <br>
         <%= link_to "Log Out", signout_path, class: "profile-button drop"  %>
       <% end %>
-
       <%= yield :side_error %>
     </div>
 
@@ -82,16 +78,16 @@
   </div>
 </div>
   <script>
-    $( "confirm" ).click(function() {
-      $( ".rcontainer" ).fadeOut( 1800 );
+    $( ".delete-button" ).click(function() {
+      $( ".rcontainer" ).fadeOut( 200 );
     });
   </script>
 
-<script>
-  $( "not.rcontainer" ).click(function() {
+<!-- // <script>
+  $( "delete-button" ).click(function() {
     $( ".rcontainer" ).fadeOut( "slow" );
   });
-</script>
+// </script> -->
 
 </body>
 </html>
