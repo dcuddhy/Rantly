@@ -17,7 +17,9 @@
       <%= link_to "Rantly", root_path  %>
         <span><%= link_to "Rants", root_path  %></span>
         <span><%= link_to "Users", users_path %></span>
-        <span><%= link_to "Sign Up", signup_path  %></span>
+        <% if !current_user %>
+          <span><%= link_to "Sign Up", signup_path  %></span>
+        <% end %>
         <% if current_user %>
           <span class = "pull-right"><%= current_user.full_name %></span>
         <% end %>

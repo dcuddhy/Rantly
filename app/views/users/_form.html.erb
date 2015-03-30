@@ -1,17 +1,19 @@
+<div class="scroll">
   <% content_for :side_error do %>
     <br><%= render "layouts/errors", object: @user %>
   <% end %>
-fraggle rock
-  <%= form_for @user do |f| %>
+  <div class="form">
 
-      <%= f.text_field :first_name, class: "user-form", :placeholder => "First Name" %>
+    <%= form_for @user do |f| %>
+      <%= f.text_field :first_name, class: "user-form", placeholder: "First Name" %>
+      <%= f.text_field :last_name, class: "user-form", placeholder: "Last Name" %>
+      <%= f.email_field :email, class: "user-form", placeholder: "Email" %>
+      <div class="has-feedback lower-glyphicon">
+        <%= f.password_field :password, class: "user-form", placeholder: "Password" %>
+        <i class="fa fa-lock form-control-feedback"></i>
+      </div>
+      <%= f.submit "Log In", class:"profile-button" %>
+    <% end %>
 
-      <%= f.text_field :last_name, class: "user-form", :placeholder => "Last Name" %>
-
-      <%= f.email_field :email, class: "user-form", :placeholder => "Email" %>
-
-      <%= f.password_field :password, class: "user-form", :placeholder => "Password" %>
-
-      <%= f.submit class:"profile-button" %>
-
-  <% end %>
+  </div>
+</div>
