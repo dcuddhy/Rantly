@@ -26,5 +26,9 @@
 .has-feedback .fa-user, .has-feedback .fa-lock{
   color: $inactiveGrey;
   font-size: 16pt;
+}
 
+.user-form:focus + .fa-user, .user-form:focus + .fa-lock{
+  color: $buttonGreen;
+  font-size: 16pt;
 }
